@@ -1,1 +1,1 @@
-my nvim config
+my nvim config with lazy
