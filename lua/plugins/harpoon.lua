@@ -1,10 +1,9 @@
-return{
-    'ThePrimeagen/harpoon',
+return {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
     config = function()
-        local harpoon = require("harpoon")
-
+        local harpoon = require "harpoon"
         harpoon:setup()
-
         vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
         vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
@@ -16,5 +15,5 @@ return{
         vim.keymap.set("n", "<leader><C-t>", function() harpoon:list():replace_at(2) end)
         vim.keymap.set("n", "<leader><C-n>", function() harpoon:list():replace_at(3) end)
         vim.keymap.set("n", "<leader><C-s>", function() harpoon:list():replace_at(4) end)
-    end
+    end,
 }
