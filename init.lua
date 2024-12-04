@@ -1,5 +1,6 @@
 print("advent of neovim")
-print("advent of neovim helloo")
+
+require("config.lazy")
 
 vim.keymap.set('n', "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set('n', "<space>x", "<cmd>:.lua<CR>")
