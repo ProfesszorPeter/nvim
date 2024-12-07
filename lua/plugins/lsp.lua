@@ -26,8 +26,8 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "jedi",
-                "yamlls",
+                "csharp_ls",
+                "lua",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
