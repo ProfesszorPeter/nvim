@@ -8,14 +8,6 @@ vim.opt.clipboard = "unnamedplus"
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
-vim.cmd [[hi @function.builtin.lua guifg=turquoise]]
-vim.cmd [[hi @keyword.conditional.lua guifg=blueviolet]]
-vim.cmd [[hi @boolean.lua guifg=blue]]
-if false then
-  print "kék"
-end
-local x = 5
-print(x)
 
 vim.keymap.set('n', "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set('n', "<space>x", "<cmd>:.lua<CR>")
