@@ -2,7 +2,7 @@ print("advent of neovim")
 
 require("config.lazy")
 
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.clipboard = "unnamedplus"
 
 --vim.wo.foldmethod = 'expr'
