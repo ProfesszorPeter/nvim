@@ -1,9 +1,6 @@
-print("advent of neovim")
-
 require("config.lazy")
+require("config.config.set")
 
-vim.opt.shiftwidth = 2
-vim.opt.clipboard = "unnamedplus"
 
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
