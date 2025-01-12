@@ -20,6 +20,18 @@ return {
       require('lspconfig').csharp_ls.setup { capabilites = capabilities }
       require 'lspconfig'.omnisharp.setup { capabilites = capabilities }
       require 'lspconfig'.pylsp.setup { capabilites = capabilities }
+      require("lspconfig").dockerls.setup {
+        settings = {
+          docker = {
+            languageserver = {
+              formatter = {
+                ignoreMultilineInstructions = true,
+              },
+            },
+          }
+        }
+      }
+      require 'lspconfig'.dockerls.setup {}
 
 
       vim.api.nvim_create_autocmd('LspAttach', {
