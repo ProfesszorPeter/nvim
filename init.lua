@@ -1,14 +1,6 @@
 require("config.lazy")
 require("config.config.set")
-
-
---vim.wo.foldmethod = 'expr'
---vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-
-
-vim.keymap.set('n', "<space><space>x", "<cmd>source %<CR>")
-vim.keymap.set('n', "<space>x", "<cmd>:.lua<CR>")
-vim.keymap.set('v', "<space>x", "<cmd>:lua<CR>")
+require("config.config.remap")
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -17,3 +9,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+--false
+if true then
+  return
+end
