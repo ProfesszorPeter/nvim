@@ -2,6 +2,8 @@ local set = vim.opt
 set.shiftwidth = 2
 set.clipboard = "unnamedplus"
 
+
+vim.opt.cursorline = true
 set.number = true
 set.relativenumber = true
 

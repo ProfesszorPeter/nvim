@@ -10,7 +10,9 @@ config = function()
   require('lspconfig').csharp_ls.setup { capabilites = capabilities }
   require 'lspconfig'.omnisharp.setup { capabilites = capabilities }
 end
-vim.cmd [[hi @function.builtin.lua guifg=turquoise]]
-vim.cmd [[hi @keyword.conditional.lua guifg=blueviolet]]
-vim.cmd [[hi @boolean.lua guifg=blue]]
+vim.cmd [[hi @function.builtinc_sharp guifg=turquoise]]
+vim.cmd [[hi @keyword.conditionalc_sharp guifg=blueviolet]]
+vim.cmd [[hi @booleanc_sharp guifg=blue]]
 vim.cmd [[hi DiagnosticUnderlineError guifg=red]]
+vim.cmd [[hi @lsp.mod.static.cs guifg=green]]
+

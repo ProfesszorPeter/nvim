@@ -19,11 +19,11 @@ return {
     vim.keymap.set('n', '<C-g>', builtin.git_files, {})
     vim.keymap.set('n', '<C-h>t', builtin.help_tags, {})
 
-    vim.keymap.set('n', '<leader>fw', function()
+    vim.keymap.set('n', '<leader>tfw', function()
       local word = vim.fn.expand("<cword>")
       builtin.grep_string({ search = word })
     end)
-    vim.keymap.set('n', '<leader>Ws', function()
+    vim.keymap.set('n', '<leader>tWs', function()
       local word = vim.fn.expand("<cWORD>")
       builtin.grep_string({ search = word })
     end)

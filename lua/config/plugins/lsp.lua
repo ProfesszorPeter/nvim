@@ -20,6 +20,11 @@ return {
       require('lspconfig').csharp_ls.setup { capabilites = capabilities }
       require 'lspconfig'.omnisharp.setup { capabilites = capabilities }
       require 'lspconfig'.pylsp.setup { capabilites = capabilities }
+      require 'lspconfig'.ts_ls.setup { capabilites = capabilities }
+      --require 'lspconfig'.ltex.setup { capabilites = capabilities }
+      require 'lspconfig'.jsonls.setup { capabilites = capabilities }
+      require 'lspconfig'.html.setup { capabilites = capabilities }
+      require 'lspconfig'.gopls.setup { capabilites = capabilities }
       require("lspconfig").dockerls.setup {
         settings = {
           docker = {
@@ -31,7 +36,7 @@ return {
           }
         }
       }
-      require 'lspconfig'.dockerls.setup {}
+      require 'lspconfig'.dockerls.setup { capabilites = capabilities }
 
       require("mason").setup({
         ui = {
@@ -58,16 +63,16 @@ return {
       --})
       local builtin = require "telescope.builtin"
 
-          vim.keymap.set("n", "gd", builtin.lsp_definitions)
-          vim.keymap.set("n", "gr", builtin.lsp_references, { buffer = 0 })
-          vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
-          vim.keymap.set("n", "gD", vim.lsp.buf.definition)
-          vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
+      vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { buffer = 0 })
+      vim.keymap.set("n", "gd", builtin.lsp_definitions)
+      vim.keymap.set("n", "gr", builtin.lsp_references, { buffer = 0 })
+      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = 0 })
+      vim.keymap.set("n", "gD", vim.lsp.buf.definition)
+      vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = 0 })
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
 
-          vim.keymap.set("n", "<space>cr", vim.lsp.buf.rename, { buffer = 0 })
-          vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
-          vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
+      vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { buffer = 0 })
+      vim.keymap.set("n", "<space>wd", builtin.lsp_document_symbols, { buffer = 0 })
     end,
   }
 }

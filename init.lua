@@ -9,8 +9,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
-
---false
-if true then
-  return
-end
+vim.keymap.set('i', '<c-s>', function() vim.lsp.buf.signature_help() end, {buffer=true})
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+    vim.lsp.handlers['signature_help'], {
+        border = 'single',
+        close_events = {"CursorMoved", "BufHidden", "InsertCharPre"},
+    }
+)
