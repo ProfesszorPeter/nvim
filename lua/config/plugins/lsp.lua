@@ -17,8 +17,8 @@ return {
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       require("lspconfig").lua_ls.setup { capabilites = capabilities }
-      require('lspconfig').csharp_ls.setup { capabilites = capabilities }
-      require 'lspconfig'.omnisharp.setup { capabilites = capabilities }
+      --require('lspconfig').csharp_ls.setup { capabilites = capabilities }
+      --require 'lspconfig'.omnisharp.setup { capabilites = capabilities }
       require 'lspconfig'.pylsp.setup { capabilites = capabilities }
       require 'lspconfig'.ts_ls.setup { capabilites = capabilities }
       --require 'lspconfig'.ltex.setup { capabilites = capabilities }
