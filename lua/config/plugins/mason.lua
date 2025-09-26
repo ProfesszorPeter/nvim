@@ -8,7 +8,7 @@ return {
     require("mason").setup()
   require("mason-lspconfig").setup
   {
-    "csharp_ls",
+    "lua-language-server",
   }
   end
 }
