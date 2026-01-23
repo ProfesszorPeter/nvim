@@ -1,4 +1,3 @@
-print("test")
 vim.keymap.set("n","<leader>pv", ":Explore<CR>")
 vim.keymap.set("n","<leader>u", ":UndotreeToggle<CR>")
 vim.keymap.set('i', '<c-s>', function() vim.lsp.buf.signature_help() end, {buffer=true})
