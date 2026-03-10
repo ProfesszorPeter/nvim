@@ -19,3 +19,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
   })
+
+vim.cmd [[set completeopt+=menuone,noselect,popup]]

@@ -11,13 +11,13 @@
 --- Neovim does not currently include built-in snippets. `vscode-css-language-server` only provides completions when snippet support is enabled. To enable completion, install a snippet plugin and add the following override to your language client capabilities during setup.
 ---
 --- ```lua
---- --Enable (broadcasting) snippet capability for completion
---- local capabilities = vim.lsp.protocol.make_client_capabilities()
---- capabilities.textDocument.completion.completionItem.snippetSupport = true
----
---- vim.lsp.config('cssls', {
----   capabilities = capabilities,
---- })
+ --Enable (broadcasting) snippet capability for completion
+ local capabilities = vim.lsp.protocol.make_client_capabilities()
+ capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+ vim.lsp.config('cssls', {
+   capabilities = capabilities,
+ })
 --- ```
 
 ---@type vim.lsp.Config

@@ -3,7 +3,7 @@ vim.o.number=true
 vim.o.relativenumber=true
 vim.o.autoread = true
 vim.o.wrap = false
-vim.o.winborder = "rounded"
+vim.o.winborder = "double"
 
 
 local set = vim.opt
@@ -20,7 +20,7 @@ vim.o.smartindent = true
 
 vim.o.swapfile = false
 vim.o.backup = false
-vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.o.undodir = os.getenv("HOME") .. "/home/peter/.config/nvim/undodir"
 vim.o.undofile = true
 
 vim.o.hlsearch = false
