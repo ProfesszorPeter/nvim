@@ -3,6 +3,6 @@ require "nvim-treesitter.config".setup(
     {
         install_dir=vim.fn.stdpath('data').. '/site',
         auto_install = true,
-        ensure_installed = {"lua", "yaml"},
+        ensure_installed = {"lua", "yaml", "html"},
         highlight = {enabled = true}
     })
